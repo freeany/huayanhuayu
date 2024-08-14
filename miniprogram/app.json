@@ -71,5 +71,8 @@
     "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
     "van-goods-action-button": "@vant/weapp/goods-action-button/index"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "resolveAlias": {
+    "@/*": "/*"
+  }
 }

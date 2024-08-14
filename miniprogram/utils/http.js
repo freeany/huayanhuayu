@@ -1,5 +1,5 @@
 // 导入模块、包提供的类
-import WxRequest from 'mina-request'
+import WxRequest from './request'
 // 导入封装的本地存储操作模块
 import { getStorage, clearStorage } from './storage'
 // 导入封装的增强 API
