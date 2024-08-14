@@ -6,7 +6,7 @@
     "ignore": [],
     "include": []
   },
-  "miniprogramRoot": "miniprogramRoot/",
+  "miniprogramRoot": "miniprogram/",
   "setting": {
     "coverView": true,
     "es6": true,
