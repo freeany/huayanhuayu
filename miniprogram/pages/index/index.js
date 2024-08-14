@@ -19,14 +19,16 @@ Page({
     const res = await reqIndexData();
 
     // 需要对数据进行赋值，在赋值的时候，一定要注意索引
-    this.setData({
-      bannerList: res[0].data,
-      categoryList: res[1].data,
-      activeList: res[2].data,
-      guessList: res[3].data,
-      hotList: res[4].data,
-      loading: false,
-    });
+    setTimeout(() => {
+      this.setData({
+        bannerList: res[0].data,
+        categoryList: res[1].data,
+        activeList: res[2].data,
+        guessList: res[3].data,
+        hotList: res[4].data,
+        loading: false,
+      });
+    },1000)
   },
 
   // 监听页面的加载
