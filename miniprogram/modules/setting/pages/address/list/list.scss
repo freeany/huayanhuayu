@@ -1,5 +1,3 @@
-/* pages/address/list/index.wxss */
-
 page {
   height: 100%;
 }
@@ -10,9 +8,44 @@ page {
   overflow-x: hidden;
 }
 
+.list-warpper {
+  background-color: #fff;
+  border-radius: 14rpx;
+  margin-bottom: 44rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  .list-item {
+    align-items: center;
+    padding: 40rpx 18rpx;
+    justify-content: space-between;
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 0rpx 8rpx;
+      background: #f0f1ff;
+      color: #5a66ff;
+    }
+    .default-tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 0rpx 8rpx;
+      background: #ffece9;
+      color: #fa4126;
+      margin-left: 4px;
+    }
+    &:not(:last-child) {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(229, 229, 229);
+    }
+    .info {
+      width: 86%;
+    }
+  }
+}
+
 .list-item .list-item-box {
   display: flex;
-
   .editBtn {
     display: flex;
     justify-content: center;
@@ -37,55 +70,10 @@ page {
   color: #333;
   line-height: 30rpx;
   font-weight: 500;
-
   text {
     margin: 0rpx 6rpx;
-
     &:first-child {
       margin: 0rpx;
-    }
-  }
-}
-
-.list-warpper {
-  background-color: #fff;
-  border-radius: 14rpx;
-  margin-bottom: 44rpx;
-  padding: 10rpx;
-  box-sizing: border-box;
-
-  .list-item {
-    align-items: center;
-    padding: 40rpx 18rpx;
-    justify-content: space-between;
-
-    .tag {
-      display: inline-block;
-      font-size: 12px;
-      padding: 0rpx 8rpx;
-      background: #f0f1ff;
-      color: #5a66ff;
-    }
-
-    .default-tag {
-      display: inline-block;
-      font-size: 12px;
-      padding: 0rpx 8rpx;
-      background: #ffece9;
-      color: #fa4126;
-      margin-left: 4px;
-    }
-
-    &:not(:last-child) {
-      // border-bottom: red 2rpx solid;
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
-      border-bottom-color: rgb(229, 229, 229);
-    }
-
-    .info {
-      // margin-right: 32rpx;
-      width: 86%;
     }
   }
 }
@@ -99,7 +87,6 @@ page {
   justify-content: center;
   align-items: center;
   height: 130rpx;
-
   .btn {
     width: 76%;
     line-height: 80rpx;

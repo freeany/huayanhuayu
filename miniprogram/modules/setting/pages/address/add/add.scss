@@ -10,7 +10,7 @@
     padding: 24rpx 10rpx;
     position: relative;
     border-bottom: 1rpx solid #ddd;
-	align-items: center;
+    align-items: center;
 
     &:last-child {
       border: none;
@@ -44,9 +44,9 @@
 }
 
 .button {
-  height: 80rpx;
+  //height: 80rpx;
   text-align: center;
-  line-height: 80rpx;
+  line-height: 40rpx;
   margin: 30rpx 20rpx;
   color: #fff;
   border-radius: 80rpx;

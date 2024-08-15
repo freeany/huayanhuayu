@@ -21,7 +21,7 @@ ComponentWithStore({
             const { data } = await reqLogin(code)
 
             // 登录成功以后将 token 存储到本地
-            wx.setStorageSync('token', data.token)
+            setStorage('token', data.token)
 
             // 将数据存储到 store 对象中
             this.setToken(data.token)

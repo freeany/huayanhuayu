@@ -8,11 +8,11 @@
     "pages/goods/detail/detail",
     "pages/order/detail/detail",
     "pages/order/list/list",
-    "pages/address/add/index",
-    "pages/address/list/index",
     "pages/login/login",
-    "pages/settings/settings",
-    "pages/profile/profile"
+    "modules/setting/pages/profile/profile",
+    "modules/setting/pages/setting/setting",
+    "modules/setting/pages/address/add/add",
+    "modules/setting/pages/address/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
