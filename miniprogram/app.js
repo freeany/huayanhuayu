@@ -2,7 +2,12 @@
 import "./utils/extendApi";
 
 App({
-  async onLaunch() {
+  // 定义全局共享的数据
+  globalData: {
+    // 默认收货地址，放在全局中
+    address: {}
+  },
+  async onLaunch () {
     // 第二种调用方式：更改默认配置
     // const res = await wx.modal({
     //   content: "鉴权失败，请重新登录",
