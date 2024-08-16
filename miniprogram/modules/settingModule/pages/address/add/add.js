@@ -1,7 +1,7 @@
 import Schema from 'async-validator';
-import QQMapWX from '@/modules/setting/libs/qqmap-wx-jssdk.min.js'
+import QQMapWX from '@/modules/settingModule/libs/qqmap-wx-jssdk.min.js'
 import { toast } from '@/utils/extendApi'
-import { reqAddressInfo, reqUpdateAddress, reqAddAddress } from '@/modules/setting/api/address'
+import { reqAddressInfo, reqUpdateAddress, reqAddAddress } from '@/modules/settingModule/api/address'
 
 Page({
   data: {
@@ -19,11 +19,11 @@ Page({
   },
   onLoad (options) {
     // 对核心类 QQMapWX 进行实例化
-    // this.qqmapwx = new QQMapWX({
-    //   // key 要使用自己申请的 key
-    //   // 在进行逆解析的时候，如果发现 key 只能使用一次，需要在腾讯位置服务后台配置额度
-    //   key: 'S5CBZ-TQXCB-L73UJ-J6VJA-FXS53-JNBY3'
-    // })
+    this.qqmapwx = new QQMapWX({
+      // key 要使用自己申请的 key
+      // 在进行逆解析的时候，如果发现 key 只能使用一次，需要在腾讯位置服务后台配置额度
+      key: 'S5CBZ-TQXCB-L73UJ-J6VJA-FXS53-JNBY3'
+    })
     this.showAddressInfo(options.id)
   },
   /** 保存收货地址 */

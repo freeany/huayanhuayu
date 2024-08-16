@@ -1,4 +1,4 @@
-import { reqAddressList, reqDelAddress } from '@/modules/setting/api/address'
+import { reqAddressList, reqDelAddress } from '@/modules/settingModule/api/address'
 import { modal, toast } from '@/utils/extendApi'
 import { swipeCellBehavior } from '@/behaviors/swipeCell'
 
@@ -41,7 +41,7 @@ Page({
   toEdit (event) {
     const { id } = event.currentTarget.dataset
     wx.navigateTo({
-      url: `/modules/setting/pages/address/add/add?id=${id}`
+      url: `/modules/settingModule/pages/address/add/add?id=${id}`
     })
   },
 })

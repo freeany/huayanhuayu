@@ -41,7 +41,7 @@
 
   <view class="footer">
     <view class="btn">
-      <navigator url="/modules/setting/pages/address/add/add">
+      <navigator url="/modules/settingModule/pages/address/add/add">
         新增地址
       </navigator>
     </view>

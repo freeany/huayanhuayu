@@ -8,11 +8,7 @@
     "pages/goods/detail/detail",
     "pages/order/detail/detail",
     "pages/order/list/list",
-    "pages/login/login",
-    "modules/setting/pages/profile/profile",
-    "modules/setting/pages/setting/setting",
-    "modules/setting/pages/address/add/add",
-    "modules/setting/pages/address/list/list"
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -72,6 +68,24 @@
     "van-goods-action-button": "@vant/weapp/goods-action-button/index"
   },
   "sitemapLocation": "sitemap.json",
+  "subPackages": [
+    {
+      "root": "modules/settingModule",
+      "name": "setting",
+      "pages": [
+        "pages/address/add/add",
+        "pages/address/list/list",
+        "pages/profile/profile",
+        "pages/setting/setting"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/my/my": {
+      "network": "all",
+      "packages": ["setting"]
+    }
+  },
   "resolveAlias": {
     "@/*": "/*"
   }

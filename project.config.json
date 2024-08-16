@@ -28,7 +28,8 @@
     ],
     "useCompilerPlugins": [
       "sass"
-    ]
+    ],
+    "ignoreUploadUnusedFiles": true
   },
   "condition": {},
   "editorSetting": {
