@@ -45,7 +45,7 @@ Page({
   },
 
   // 弹框的确定按钮触发的事件处理函数
-  async handlerSubmit () {
+  async handleSubmit () {
     // 解构相关的数据
     const { token, count, blessing, buyNow } = this.data
     // 获取商品的 id

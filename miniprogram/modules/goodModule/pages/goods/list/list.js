@@ -1,4 +1,4 @@
-import { reqGoodsList } from '../../../api/goods'
+import { reqGoodsList } from '@/modules/goodModule/api/goods'
 
 Page({
   // 页面的初始数据
@@ -18,7 +18,7 @@ Page({
   },
 
   // 获取商品列表数据
-  async getGoodsList() {
+  async getGoodsList () {
     // 在请求发送之前，需要将 isLoading 设置为 true，表示请求正在发送中
     this.data.isLoading = true
 
@@ -35,7 +35,7 @@ Page({
   },
 
   // 监听到页面的上拉操作
-  onReachBottom() {
+  onReachBottom () {
     // 解构数据
     const { goodsList, total, requestData, isLoading } = this.data
     const { page } = requestData
@@ -63,7 +63,7 @@ Page({
   },
 
   // 监听页面的下拉刷新操作
-  onPullDownRefresh() {
+  onPullDownRefresh () {
     // 将数据进行重置
     this.setData({
       goodsList: [],
@@ -79,7 +79,7 @@ Page({
     wx.stopPullDownRefresh()
   },
 
-  onLoad(options) {
+  onLoad (options) {
     // Object.assign 用来合并对象，后面对象对的属性会往前进行合并
     Object.assign(this.data.requestData, options)
 
@@ -88,8 +88,8 @@ Page({
   },
 
   // 转发功能，转发给好友、群聊
-  onShareAppMessage() {},
+  onShareAppMessage () { },
 
   // 能够把小程序分享到朋友圈
-  onShareTimeline() {}
+  onShareTimeline () { }
 })

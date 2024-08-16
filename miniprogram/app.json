@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/category/category",
-    "pages/cart/cart",
     "pages/my/my",
+    "pages/cart/cart",
     "pages/order/detail/detail",
     "pages/order/list/list",
     "pages/login/login"
@@ -80,10 +80,7 @@
     {
       "root": "modules/goodModule",
       "name": "goodModule",
-      "pages": [
-        "pages/goods/list/list", 
-        "pages/goods/detail/detail"
-      ]
+      "pages": ["pages/goods/list/list", "pages/goods/detail/detail"]
     }
   ],
   "preloadRule": {
