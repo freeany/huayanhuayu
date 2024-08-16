@@ -17,7 +17,7 @@ Page({
   },
 
   // 加入购物车
-  handleAddcart() {
+  handleAddcart () {
     this.setData({
       show: true,
       buyNow: 0
@@ -25,7 +25,7 @@ Page({
   },
 
   // 立即购买
-  handeGotoBuy() {
+  handeGotoBuy () {
     this.setData({
       show: true,
       buyNow: 1
@@ -33,19 +33,19 @@ Page({
   },
 
   // 点击关闭弹框时触发的回调
-  onClose() {
+  onClose () {
     this.setData({ show: false })
   },
 
   // 监听是否更改了购买数量
-  onChangeGoodsCount(event) {
+  onChangeGoodsCount (event) {
     this.setData({
       count: Number(event.detail)
     })
   },
 
   // 弹框的确定按钮触发的事件处理函数
-  async handlerSubmit() {
+  async handlerSubmit () {
     // 解构相关的数据
     const { token, count, blessing, buyNow } = this.data
     // 获取商品的 id
@@ -83,14 +83,14 @@ Page({
   },
 
   // 全屏预览图片
-  previewImage() {
+  previewImage () {
     wx.previewImage({
       urls: this.data.goodsInfo.detailList
     })
   },
 
   // 获取商品详情的数据
-  async getGoodsInfo() {
+  async getGoodsInfo () {
     const { data: goodsInfo } = await reqGoodsInfo(this.goodsId)
 
     this.setData({
@@ -99,7 +99,7 @@ Page({
   },
 
   // 计算购物车商品的数量
-  async getCartCount() {
+  async getCartCount () {
     // 使用 token 来判断用户是否进行了登录，
     // 如果没有 token，说明用户没有登录，就不执行后续的逻辑
     if (!this.data.token) return
@@ -125,7 +125,7 @@ Page({
     }
   },
 
-  onLoad(options) {
+  onLoad (options) {
     // 接收传递的商品 ID，并且将 商品 ID 挂载到 this 上面
     this.goodsId = options.goodsId
 
@@ -137,7 +137,7 @@ Page({
   },
 
   // 转发功能，转发给好友、群聊
-  onShareAppMessage() {
+  onShareAppMessage () {
     return {
       title: '所有的怦然心动，都是你',
       path: '/pages/index/index',
@@ -146,5 +146,5 @@ Page({
   },
 
   // 能够把小程序分享到朋友圈
-  onShareTimeline() {}
+  onShareTimeline () { }
 })

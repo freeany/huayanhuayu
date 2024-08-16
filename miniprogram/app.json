@@ -4,8 +4,6 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/my/my",
-    "pages/goods/list/list",
-    "pages/goods/detail/detail",
     "pages/order/detail/detail",
     "pages/order/list/list",
     "pages/login/login"
@@ -71,19 +69,31 @@
   "subPackages": [
     {
       "root": "modules/settingModule",
-      "name": "setting",
+      "name": "settingModule",
       "pages": [
         "pages/address/add/add",
         "pages/address/list/list",
         "pages/profile/profile",
         "pages/setting/setting"
       ]
+    },
+    {
+      "root": "modules/goodModule",
+      "name": "goodModule",
+      "pages": [
+        "pages/goods/list/list", 
+        "pages/goods/detail/detail"
+      ]
     }
   ],
   "preloadRule": {
     "pages/my/my": {
       "network": "all",
-      "packages": ["setting"]
+      "packages": ["settingModule"]
+    },
+    "pages/category/category": {
+      "network": "all",
+      "packages": ["goodModule"]
     }
   },
   "resolveAlias": {
