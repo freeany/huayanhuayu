@@ -3,6 +3,8 @@ import { toast } from '@/utils/extendApi'
 import { userStore } from '@/stores/user'
 import { setStorage } from '@/utils/storage'
 import { ComponentWithStore } from 'mobx-miniprogram-bindings'
+// 引入防抖函数
+import { debounce } from 'miniprogram-licia'
 
 ComponentWithStore({
   storeBindings: {
@@ -12,7 +14,7 @@ ComponentWithStore({
   },
   methods: {
     // 点击登录
-    login () {
+    login: debounce(function () {
       // 调用 wx.login 获取用户信息
       wx.login({
         success: async ({ code }) => {
@@ -35,7 +37,7 @@ ComponentWithStore({
           }
         }
       })
-    },
+    }, 500),
     async getUserInfo () {
       const { data } = await reqUserInfo()
       // 将用户信息存储到本地
