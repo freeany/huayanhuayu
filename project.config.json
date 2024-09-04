@@ -24,6 +24,14 @@
       {
         "packageJsonPath": "./package.json",
         "miniprogramNpmDistDir": "./miniprogram"
+      },
+      {
+        "packageJsonPath": "./miniprogram/modules/orderPayModule/package.json",
+        "miniprogramNpmDistDir": "./miniprogram/modules/orderPayModule"
+      },
+      {
+        "packageJsonPath": "./miniprogram/modules/settingModule/package.json",
+        "miniprogramNpmDistDir": "./miniprogram/modules/settingModule"
       }
     ],
     "useCompilerPlugins": [

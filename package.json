@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@vant/weapp": "^1.11.6",
-    "async-validator": "^4.2.5",
     "miniprogram-computed": "^5.0.0",
     "miniprogram-licia": "^1.41.1",
     "mobx-miniprogram": "^6.12.3",

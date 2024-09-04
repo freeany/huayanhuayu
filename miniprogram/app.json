@@ -110,7 +110,7 @@
       "packages": ["settingModule"]
     }
   },
-  "requiredPrivateInfos": ["getLocation", "chooseLocation"],
+  "requiredPrivateInfos": ["chooseLocation"],
   "permission": {
     "scope.userLocation": {
       "desc": "获取地理位置信息用于填写收货地址"
@@ -118,5 +118,6 @@
   },
   "resolveAlias": {
     "@/*": "/*"
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

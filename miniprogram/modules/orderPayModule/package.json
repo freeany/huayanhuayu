@@ -1,0 +1,11 @@
+{
+  "name": "flower-project-ordermodule",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-validator": "^4.2.5"
+  }
+}
