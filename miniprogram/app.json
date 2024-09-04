@@ -4,8 +4,6 @@
     "pages/category/category",
     "pages/my/my",
     "pages/cart/cart",
-    "pages/order/detail/detail",
-    "pages/order/list/list",
     "pages/login/login"
   ],
   "window": {

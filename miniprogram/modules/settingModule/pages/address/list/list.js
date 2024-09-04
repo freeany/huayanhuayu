@@ -2,6 +2,8 @@ import { reqAddressList, reqDelAddress } from '@/modules/settingModule/api/addre
 import { modal, toast } from '@/utils/extendApi'
 import { swipeCellBehavior } from '@/behaviors/swipeCell'
 
+// 获取应用实例
+const app = getApp()
 Page({
   behaviors: [swipeCellBehavior],
   data: {
@@ -29,6 +31,7 @@ Page({
       this.getAddressList()
     }
   },
+  // 如果是结算页面进来的，点击收货地址，切换成当前点击的收货页面，然后返回
   changeAddress (event) {
     if (this.flag !== '1') return
     const addressId = event.currentTarget.dataset.id

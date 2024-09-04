@@ -23,7 +23,7 @@
         <!-- 如果是，在点击收货地址时，就需要给全局共享的 address 进行赋值 -->
         <navigator
           class="navigator"
-          url="/modules/settingModule/pages/address/list/index?flag=1"
+          url="/modules/settingModule/pages/address/list/list?flag=1"
         >
           <van-icon color="#bbb" name="arrow" size="22px" />
         </navigator>

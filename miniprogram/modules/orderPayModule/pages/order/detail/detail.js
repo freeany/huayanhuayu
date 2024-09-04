@@ -70,7 +70,7 @@ Page({
   }, 500),
 
   // 获取预付单信息、支付参数
-  async advancePay() {
+  async advancePay () {
     try {
       const payParams = await reqPrePayInfo(this.orderNo)
 
@@ -107,7 +107,7 @@ Page({
   },
 
   // 对收货人、订购人信息进行验证
-  validatorPerson(params) {
+  validatorPerson (params) {
     // 验证订购人，是否只包含大小写字母、数字和中文字符
     const nameRegExp = '^[a-zA-Z\\d\\u4e00-\\u9fa5]+$'
 
@@ -152,14 +152,20 @@ Page({
   },
 
   // 选择期望送达日期
-  onShowDateTimerPopUp() {
+  onShowDateTimerPopUp () {
     this.setData({
       show: true
     })
   },
-
+  // {
+  //   nonceStr: "Zkwd7h3J8FVoIZrl",
+  //   package: "prepay_id=wx04154944102296d91176655dfac94f0000",
+  //   paySign: "7B70D76401DF7ABC61EBD9D0FCB562FC",
+  //   signType: "MD5",
+  //   timeStamp: "1725436184163"
+  // }
   // 期望送达日期确定按钮
-  onConfirmTimerPicker(event) {
+  onConfirmTimerPicker (event) {
     // 使用 Vant 提供的时间选择组件，获取的时间是时间戳
     // 需要将时间戳转换成年月日在页面中进行展示才可以
     // 可以调用小程序给提供的日期格式化方法对时间进行转换
@@ -176,7 +182,7 @@ Page({
   },
 
   // 期望送达日期取消按钮 以及 关闭弹框时触发
-  onCancelTimePicker() {
+  onCancelTimePicker () {
     this.setData({
       show: false,
       minDate: new Date().getTime(),
@@ -185,14 +191,14 @@ Page({
   },
 
   // 跳转到收货地址
-  toAddress() {
+  toAddress () {
     wx.navigateTo({
-      url: '/modules/settingModule/pages/address/list/index'
+      url: '/modules/settingModule/pages/address/list/list?flag=1'
     })
   },
 
   // 获取订单页面的收货地址
-  async getAddress() {
+  async getAddress () {
     // 判断全局共享的 address 中是否存在数据，
     // 如果存在数据，就需要从全局共享的 address 中取到数据进行赋值
     const addressId = app.globalData.address.id
@@ -201,7 +207,6 @@ Page({
       this.setData({
         orderAddress: app.globalData.address
       })
-
       return
     }
 
@@ -212,9 +217,8 @@ Page({
       orderAddress
     })
   },
-
   // 获取订单详情数据
-  async getOrderInfo() {
+  async getOrderInfo () {
     const { goodsId, blessing } = this.data
 
     const { data: orderInfo } = goodsId
@@ -230,9 +234,8 @@ Page({
       blessing: !orderGoods ? '' : orderGoods.blessing
     })
   },
-
   // 在页面加载的时候触发
-  onLoad(options) {
+  onLoad (options) {
     // 获取立即购买商品传递的参数
     // 然后把参数赋值给 data 中的状态
     this.setData({
@@ -241,7 +244,7 @@ Page({
   },
 
   // 在页面展示的时候进行触发
-  onShow() {
+  onShow () {
     // 获取收货地址
     this.getAddress()
 
@@ -249,10 +252,12 @@ Page({
     this.getOrderInfo()
   },
 
-  onUnload() {
+  onUnload () {
+    // 返回就会销毁当前页面
+    console.log('结算页面unload');
+
     // 在页面销毁以后，需要将全局共享的 address 也进行重置
     // 如果用户再次进入结算支付页面，需要从接口地址获取默认的收货地址进行渲染
-    // 需要和产品多沟通
     app.globalData.address = {}
   }
 })

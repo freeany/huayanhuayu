@@ -12,7 +12,7 @@ Page({
   },
 
   // 获取首页数据
-  async getIndexData() {
+  async getIndexData () {
     // 调用接口 API 函数，获取数据
     // reqIndexData 内部使用的 all 或者 Promise.all
     // 返回的是一个数组，是按照接口的调用顺序返回的
@@ -28,18 +28,24 @@ Page({
         hotList: res[4].data,
         loading: false,
       });
-    },1000)
+    }, 1000)
   },
 
   // 监听页面的加载
-  onLoad() {
+  onLoad () {
     // 在页面加载以后，调用获取首页数据的方法
     this.getIndexData();
   },
 
-  // 转发功能，转发给好友、群聊
-  onShareAppMessage() {},
+  // 转发功能
+  onShareAppMessage () {
+    return {
+      title: '所有的怦然心动，都是你',
+      path: '/pages/index/index',
+      imageUrl: '../../assets/images/love.jpg'
+    }
+  },
 
-  // 能够把小程序分享到朋友圈
-  onShareTimeline() {},
+  // 转发到朋友圈功能
+  onShareTimeline () { }
 });

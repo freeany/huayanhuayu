@@ -20,8 +20,6 @@ export const swipeCellBehavior = Behavior({
     },
     /** 关掉滑块统一的逻辑 */
     onSwipeCellCommonClick () {
-      console.log('click进');
-
       // 需要对单元格实例数组进行遍历，遍历以后获取每一个实例，让每一个实例调用 close 方法即可
       this.data.swipeCellQueue.forEach((instance) => {
         instance.close()

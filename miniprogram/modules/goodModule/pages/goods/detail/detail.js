@@ -127,7 +127,7 @@ Page({
 
   onLoad (options) {
     // 接收传递的商品 ID，并且将 商品 ID 挂载到 this 上面
-    this.goodsId = options.goodsId
+    this.goodsId = options.goodsId ? options.goodsId : ''
 
     // 调用获取商品详情数据的方法
     this.getGoodsInfo()
